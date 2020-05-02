@@ -1,0 +1,27 @@
+
+<div class="header">
+    <div class="inner_c">
+        <div class="logo">
+            LOGO
+        </div>
+        <div class="nav">
+            <ul>
+                <li *ngFor="let item of current_header" [style]="navWidthStr"><a href="#"  [routerLink]="[item.router]" routerLinkActive="router-link-active" [class]="item.current_class" (click)="onHeaderClick(item.index)">{{item.content}}</a></li>
+            </ul>
+        </div>
+        <div class="jrwm_box">
+            <div class="jrwm">
+                <a href="#" (click)= "onLogout()" [class]="loginStatus">{{loginStatus}}</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div *ngIf="loginStatus!='LOGIN'">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <div *ngIf="loginStatus=='LOGIN'">
+    <app-login (login_status)="onUpdateLoginStatus($event)"></app-login>
+  </div>
+<!--   
+  <app-login (login_status)="onUpdateLoginStatus($event)"></app-login> -->

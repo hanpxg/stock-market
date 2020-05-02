@@ -1,0 +1,70 @@
+<div *ngIf="isAddExchange==true">
+    <div class="content" style="height: 300px;">
+        <h2>Add Stock Exchange</h2>
+        <div class="action">
+            <form action="" method="post">
+                <div>
+                    <label>Stock Exchange:</label>
+                    <input type="text"/>
+                </div>
+                <div>
+                    <label>Brief Description:</label>
+                    <input type="text"/>
+                </div>
+                <div>
+                    <label>Contact Address:</label>
+                    <input type="text"/>
+                </div>
+                <div>
+                    <label>Remarks:</label>
+                    <input type="text"/>
+                </div>
+                <button type="button" class="btn btn-info btn-lg" style="margin-left: 370px; margin-top: 40px;" (click)="onSwitch(false)" >Back</button>
+                <button type="button" class="btn btn-primary btn-lg" style="margin-left: 20px; margin-top: 40px;" (click)="onAddExchange()" >Add</button>
+                
+            </form>
+        </div>
+        
+    </div>
+    <hr />
+</div>
+
+
+<div class="content">
+    <h2>Stock Exchange</h2>
+    <div class="action">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Stock Exchange</th>
+                <th scope="col">Brief</th>
+                <th scope="col">Contact Address</th>
+                <th scope="col">Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <th scope="col">Stock Exchange1</th>
+                  <th scope="col">Brief1</th>
+                  <th scope="col">Contact Address1</th>
+                  <th scope="col">Remarks1</th>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <th scope="col">Stock Exchange2</th>
+                  <th scope="col">Brief2</th>
+                  <th scope="col">Contact Address2</th>
+                  <th scope="col">Remarks2</th>
+                </tr>
+            </tbody>
+        </table>
+          
+        <div>
+            <img class="add_img" src="assets/and.jpg" alt="" (click)="onSwitch(true)">
+        </div>
+    </div>
+    
+</div>
+<hr />

@@ -1,0 +1,68 @@
+<!-- <div class="content">
+    <div class="btn">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Update Password</button>
+    </div>
+    <div class="btn">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Update Profile</button>
+    </div>
+</div>-->
+
+<div class="content"> 
+    <button type="button" class="btn btn-primary btn-lg" (click)="onSwitch('Update Profile')" >Update Profile</button>
+    <button type="button" class="btn btn-primary btn-lg" (click)="onSwitch('Update Password')" >Update Password</button>
+</div>
+<div *ngIf="current_status=='Update Password'">
+    <div class="login" style="width: 500px;">
+        <h2>Update Password</h2>
+        <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Old Password</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">New Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Re-enter Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+    
+            <button type="submit" class="btn btn-primary">Update</button>
+          </form>
+    </div>
+    
+</div>
+<div *ngIf="current_status=='Update Profile'">
+    <div class="login" style="width: 500px;">
+        <h2>Update Profile</h2>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Old Username">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="qishatu@163.com">
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Phone Number</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="15858586666">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Admin</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">User</label>
+              </div>
+              <br />
+            <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Update</button>
+          </form>
+    </div>
+</div>

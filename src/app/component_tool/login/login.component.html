@@ -1,0 +1,72 @@
+
+<div *ngIf="current_status=='login'">
+  <div class="login" style="margin-top: 80px; width: 50%;">
+      <h2>Login</h2>
+      <div #formobj>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="loginObj.email" name="loginObj.email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="loginObj.password" name="loginObj.password">
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2" [(ngModel)]="loginObj.usertype" name="loginObj.usertype">
+              <label class="form-check-label" for="inlineRadio1">Admin</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="1" [(ngModel)]="loginObj.usertype" name="loginObj.usertype">
+              <label class="form-check-label" for="inlineRadio2">User</label>
+            </div>
+            <br>
+
+          <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+          <br>
+          <hr>
+          <a href="#" (click)="onSwitch('register')">Register</a>
+      </div>
+  </div>
+</div>
+
+<div *ngIf="current_status=='register'">
+  <div class="login" style="width: 500px;">
+    <h2>Signup</h2>
+    <a href="#" (click)="onSwitch('login')">Back</a>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="signObj.username" name="signObj.username">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="signObj.email" name="signObj.email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  [(ngModel)]="signObj.phone" name="signObj.phone">
+          </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1"  [(ngModel)]="signObj.password" name="signObj.password">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Re-enter Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1"  [(ngModel)]="signObj.repassword" name="signObj.repassword">
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" id="inlineRadio1" value="2"  [(ngModel)]="signObj.usertype" name="signObj.usertype">
+            <label class="form-check-label" for="inlineRadio1">Admin</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" checked id="inlineRadio2" value="1" [(ngModel)]="signObj.usertype" name="signObj.usertype">
+            <label class="form-check-label" for="inlineRadio2">User</label>
+          </div>
+          <br />
+        <button type="submit" class="btn btn-primary" style="margin-top: 20px;" (click)="onSignup()">Signup</button>
+      </form>
+  </div>
+  
+</div>

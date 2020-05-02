@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei","SimSun";
+    // height: 8888px;
+}
+.header{
+    height: 58px;
+    background-color: #191D3A;
+}
+/*版心*/
+.inner_c{
+    width: 1000px;
+    margin: 0 auto; /*让导航条、内容区域等部分的版心在父亲里居中*/
+}
+/*导航条的logo*/
+.header .logo{
+    float: left;
+    margin-right: 40px;
+    margin-top: 9px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+.header .nav{
+    float: left;
+    width: 700px;
+}
+.header .nav ul{
+    list-style: none; /*去掉列表前面的圆点*/
+    width: 100%;
+}
+.header .nav ul li{
+    float: left;
+    // width: 170px;
+    line-height: 58px; /*让行高等于这一行的高度，保证里面的文字垂直居中*/
+    border-left: 1px solid #252947; /*每个li之间有间隔线*/
+}
+.header .nav ul li.last{
+    color: white;
+    border-right: 1px solid #252947;/*最后一个li的右边加间隔线*/
+}
+.header .nav ul li a{
+    display: block; /*将超链接转为块儿，可以保证其霸占父亲的整行*/
+    height: 58px;
+    text-decoration: none; /*去掉超链的下划线*/
+    color:#818496;
+    text-align: center;  /*让这个div内部的文本居中*/
+}
+.header .nav ul li a.current{
+    color:white;
+    background: #252947;
+}
+.header .nav ul li a:hover{
+    color: white;
+    background: #252947;
+}
+
+.header .jrwm_box{
+    float: left;
+    height: 58px;
+    width: 100px;
+    padding-left: 48px;
+    padding-top: 12px;
+
+}
+.header .jrwm_box .jrwm a{
+    display: block; /*将超链接转为块儿，可以保证其霸占父亲的整行*/
+    line-height: 34px; /*让行高为背景图片的高度，可以保证超链接的文字在背景图片里垂直居中*/
+    text-decoration: none; /*去掉超链的下划线*/
+    // color: rgb(184, 183, 183);
+}
+
+.content {
+    margin: 0 auto;
+    width: 1000px;
+    margin-top: 20px;
+}
+.content h2 {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content .action {
+    /* font-size: 20px; */
+    /* height: 140px; */
+    height: 22px;
+    /* margin: 0 auto; */
+}
+.content .action form div {
+    margin-top: 10px;
+}
+.content .action form div label {
+    width: 40%;
+    text-align: right;
+    padding-right: 10px;
+}
+.content .action form div input {
+    width: 40%;
+}
+.content .action form div img {
+    position: relative;
+    left: 75%;
+    width: 60px;
+}
+.content .action form div .button {
+    margin: 0 auto;
+    width: 150px;
+}
+.login {
+    margin: 0 auto;
+    width: 900px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid blue;
+    font-weight: 700px;
+}
+
+.dynamic-content {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,40 @@
+<div class="content">
+    <h2>Import Excel</h2>
+    <div class="action">
+        <div>
+            <span class="tip">Select Excel file ti upload</span>
+            <input type="text" placeholder="Select File" />
+            <button class="submit">Upload</button>
+        </div>
+        <br />
+        <div class="download">
+            <a href="">Click Here to download sample Excel file.</a>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="content">
+    <h2>Summary of Upload</h2>
+    <div class="action">
+        <div>
+            <label>Company name:</label>
+            <label>{{company.name}}</label>
+        </div>
+        <div>
+            <label>Stock Exhange:</label>
+            <label>{{company.stockExchange}}</label>
+        </div>
+        <div>
+            <label>No. of Record Imported:</label>
+            <label>{{company.record}}</label>
+        </div>
+        <div>
+            <label>From Data:</label>
+            <label>{{company.from_date}}</label>
+        </div>
+        <div>
+            <label>To Data:</label>
+            <label>{{company.to_date}}</label>
+        </div>
+    </div>
+</div>

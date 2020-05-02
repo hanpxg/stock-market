@@ -1,0 +1,48 @@
+
+
+<div class="content">
+    <h2>Comparisons Charts</h2>
+    <div class="action">
+        <form action="" method="post" #formobj>
+            <div>
+                <label>Select Company/Sector</label>
+                <select class="form-control form-control-lg" style="width: 40%; display: inline;" [(ngModel)]="chartsObj.select_company" name="chartsObj.select_company">
+                    <option *ngFor="let item of companies" [value]="item.value">{{item.content}}</option>
+                </select>
+            </div>
+            <div>
+                <label>Select Stock Exchange:</label>
+                <select class="form-control form-control-lg" style="width: 40%; display: inline;" [(ngModel)]="chartsObj.exchange_select" name="chartsObj.exchange_select">
+                    <option *ngFor="let item of exchange" [value]="item.value">{{item.content}}</option>
+                </select>
+            </div>
+            <div>
+                <label>Company Name:</label>
+                <input type="text" value="  Abc" [(ngModel)]="chartsObj.company_name" name="chartsObj.company_name"/>
+            </div> 
+            <div>
+                <label>From Period:</label>
+                
+                <input type="date" [(ngModel)]="chartsObj.from_date" name="chartsObj.from_date"/>
+            </div>
+            <div>
+                <label>Tp Period:</label>
+                <input type="date" [(ngModel)]="chartsObj.to_date" name="chartsObj.to_date"/>
+            </div>
+            <div>
+                <img src="assets/and.jpg" alt="">
+            </div>
+            <button type="button" class="btn btn-primary btn-lg" style="margin-left: 360px; margin-top: 40px;" (click)='getContent(formobj)'>Generate Map</button>
+        
+        </form>
+        
+    </div>
+</div>
+<!-- 
+<form action="" #formobj>
+    <input type="text" [(ngModel)]="username" name="username" >
+    <input type="text" [(ngModel)]="password" name="password" >
+
+    <button (click)='getContent(formobj)'>按钮</button>
+</form>
+   -->
