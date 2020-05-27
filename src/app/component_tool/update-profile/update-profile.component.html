@@ -14,22 +14,22 @@
 <div *ngIf="current_status=='Update Password'">
     <div class="login" style="width: 500px;">
         <h2>Update Password</h2>
-        <form>
+        <form #formobj>
             <div class="form-group">
               <label for="exampleInputEmail1">Old Password</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="pwdObj.oldPassword" name="oldpassword">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">New Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="pwdObj.password" name="password">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Re-enter Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="repassword" name="repassword">
               </div>
     
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn btn-primary" (click)="onUpdatePwd()">Update</button>
           </form>
     </div>
     
@@ -37,32 +37,31 @@
 <div *ngIf="current_status=='Update Profile'">
     <div class="login" style="width: 500px;">
         <h2>Update Profile</h2>
-        <form>
+        <form #formobj>
             <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Old Username">
-                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="profileObj.name" name="username">
               </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="qishatu@163.com">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="profileObj.email" name="email">
               <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Phone Number</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="15858586666">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="profileObj.mobileNumber" name="mobileNumber">
                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="admin" [(ngModel)]="type" name="type">
                 <label class="form-check-label" for="inlineRadio1">Admin</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="user" [(ngModel)]="type" name="type">
                 <label class="form-check-label" for="inlineRadio2">User</label>
               </div>
               <br />
-            <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Update</button>
+            <button type="submit" class="btn btn-primary" style="margin-top: 20px;" (click)="onUpdateProfile()">Update</button>
           </form>
     </div>
 </div>

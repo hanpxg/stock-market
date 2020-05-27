@@ -133,6 +133,7 @@ export class AppComponent implements OnInit  {
     console.log('222222222222222');
     console.log(event)
     this.current_user = event.login_status;
+    console.log(this.current_user)
     // let current_obj = {};
     console.log(this.current_user)
     if (this.current_user ==  1) {
@@ -141,14 +142,14 @@ export class AppComponent implements OnInit  {
       // current_obj = this.user;
       this.navWidthStr = this.user.navWidthStr
       this.current_header = this.user.current_header
-    } else if (this.current_user == 2) {
+    } else if (this.current_user == 0) {
       console.log(222);
       // current_obj = this.admin;
       this.navWidthStr = this.admin.navWidthStr
       this.loginStatus = this.LOGOUT;
       this.current_header = this.admin.current_header
     }
-    if (this.current_user == 2 || this.current_user == 1) {
+    if (this.current_user == 0 || this.current_user == 1) {
       this.router.navigate([this.current_header[0].router]);
       this.current_header[0].current_class = this.CURRENT;
     }

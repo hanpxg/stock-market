@@ -12,6 +12,7 @@ import { ImportDataComponent } from './component_admin/import-data/import-data.c
 import { ManageCompanyComponent } from './component_admin/manage-company/manage-company.component';
 import { ManageExchangeComponent } from './component_admin/manage-exchange/manage-exchange.component';
 import { UpdateIopComponent } from './component_admin/update-iop/update-iop.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UpdateIopComponent } from './component_admin/update-iop/update-iop.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

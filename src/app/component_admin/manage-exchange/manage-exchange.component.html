@@ -1,27 +1,29 @@
 <div *ngIf="isAddExchange==true">
-    <div class="content" style="height: 300px;">
+    <div class="content" style="height: 330px;">
         <h2>Add Stock Exchange</h2>
         <div class="action">
-            <form action="" method="post">
+            <form action="" method="post"  #formobj>
                 <div>
                     <label>Stock Exchange:</label>
-                    <input type="text"/>
+                    <input type="text"  [(ngModel)]="addItem.name" name="name"/>
                 </div>
                 <div>
                     <label>Brief Description:</label>
-                    <input type="text"/>
+                    <input type="text" [(ngModel)]="addItem.brief" name="brief"/>
                 </div>
                 <div>
                     <label>Contact Address:</label>
-                    <input type="text"/>
+                    <input type="text" [(ngModel)]="addItem.address" name="address"/>
                 </div>
                 <div>
                     <label>Remarks:</label>
-                    <input type="text"/>
+                    <input type="text" [(ngModel)]="addItem.remark" name="remark"/>
                 </div>
                 <button type="button" class="btn btn-info btn-lg" style="margin-left: 370px; margin-top: 40px;" (click)="onSwitch(false)" >Back</button>
                 <button type="button" class="btn btn-primary btn-lg" style="margin-left: 20px; margin-top: 40px;" (click)="onAddExchange()" >Add</button>
-                
+                <div *ngIf="tipFlag==true">
+                    <label style="color: red; margin: 0 auto;">数据上传失败</label>
+                </div>
             </form>
         </div>
         
@@ -44,7 +46,15 @@
               </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr *ngFor="let item of exchanges;let i=index">
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.brief}}</td>
+                    <td>{{item.address}}</td>
+                    <td>{{item.remark}}</td>
+                    <!-- <td><button type="button" class="btn btn-primary" (click)="onStartEditCompany(i)" >Edit</button></td> -->
+                </tr>
+                <!-- <tr>
                   <th scope="row">1</th>
                   <th scope="col">Stock Exchange1</th>
                   <th scope="col">Brief1</th>
@@ -57,7 +67,7 @@
                   <th scope="col">Brief2</th>
                   <th scope="col">Contact Address2</th>
                   <th scope="col">Remarks2</th>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
           

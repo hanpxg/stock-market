@@ -13,11 +13,11 @@
             <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="loginObj.password" name="loginObj.password">
           </div>
           <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="2" [(ngModel)]="loginObj.usertype" name="loginObj.usertype">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0" [(ngModel)]="loginObj.type" name="loginObj.type">
               <label class="form-check-label" for="inlineRadio1">Admin</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="1" [(ngModel)]="loginObj.usertype" name="loginObj.usertype">
+              <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="inlineRadio2" value="1" [(ngModel)]="loginObj.type" name="loginObj.type">
               <label class="form-check-label" for="inlineRadio2">User</label>
             </div>
             <br>
@@ -37,8 +37,8 @@
     <form>
         <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="signObj.username" name="signObj.username">
-            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="signObj.name" name="signObj.username">
+            <!-- <small id="emailHelp" class="form-text tfext-muted">We'll never share your email with anyone else.</small> -->
           </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
@@ -46,7 +46,7 @@
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Phone Number</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  [(ngModel)]="signObj.phone" name="signObj.phone">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  [(ngModel)]="signObj.mobileNumber" name="signObj.mobileNumber">
           </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
@@ -54,14 +54,14 @@
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Re-enter Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1"  [(ngModel)]="signObj.repassword" name="signObj.repassword">
+            <input type="password" class="form-control" id="exampleInputPassword1"  [(ngModel)]="repassword" name="repassword">
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" id="inlineRadio1" value="2"  [(ngModel)]="signObj.usertype" name="signObj.usertype">
+            <input class="form-check-input" type="radio" id="inlineRadio1" value="1"  [(ngModel)]="type" name="signObj.type">
             <label class="form-check-label" for="inlineRadio1">Admin</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" checked id="inlineRadio2" value="1" [(ngModel)]="signObj.usertype" name="signObj.usertype">
+            <input class="form-check-input" type="radio" checked id="inlineRadio2" value="0" [(ngModel)]="type" name="signObj.type">
             <label class="form-check-label" for="inlineRadio2">User</label>
           </div>
           <br />
